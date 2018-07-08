@@ -1,27 +1,11 @@
-# MySocialMedia
+MEAN Stack application using Angular 4.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+● Create the components below. ○ Login : displays login form ○ Registration : displays registration form ○ Home : After login page ○ Create Post : Display create form, with the following fields ■ Post title ■ Post description ○ List Posts : Display all the Posts created using create component and each block needs to have the following options ■ Comment ● Once the comment button is clicked, it should all the comments right below the container for the current post.
 
-## Development server
+■ Like ● Once the like button is clicked, it should increment the comment count. ● Once the user clicks on the count, it needs to should the list of users who liked the posts. (use either bootstrap modal or title attribute of html to display the users who liked)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+○ View Post : Displays details of a Post with option to view / create comments and like ○ Navigation : Displays navbar with dynamic links ● For login / registration page, the navbar will have the following links ○ Login
 
-## Code scaffolding
+○ Registration ● Upon login the user should land on home page ○ Navigation component should be updated to display the links shown below. ■ Home ■ Create Post ■ List Posts ■ Logout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+● Create separate services for auth and posts ● Use route guard and JWT tokens to make sure the user has logged. ● Apply the route guards for protecting Create user, List user and View user routes. ● Use Http interceptor to pass token value in the request headers.

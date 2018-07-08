@@ -1,0 +1,8 @@
+<h2>Login Form</h2>
+<form (ngSubmit)='loginDetails(loginForm.value)' #loginForm='ngForm'  novalidate>
+        <div class="form-row">
+                <div class="form-group col-md-6">
+Name:<input type='text'  name="name" ngModel class="form-control" required/><br/>
+Password:<input type='password' class="form-control" name="password" ngModel required/><br/>
+<input type='submit' [disabled]='loginForm.invalid' value='Login' class="form-control" class="btn btn-primary" /></div></div>
+</form>

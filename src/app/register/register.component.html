@@ -1,0 +1,12 @@
+<h2>Registration Form</h2>
+<form [formGroup]="registerForm" (ngSubmit)='onSubmit()' >
+    <div class="form-row">
+        <div class="form-group col-md-6">
+  Name:<input type='text' formControlName='name' class="form-control" (blur)='alreadyExists()'><br> 
+   Password:<input type='text' class="form-control" formControlName='password' ><br>
+  Email:<input type='text' formControlName='email' class="form-control"><br>
+  Phone:<input type='text' formControlName='phone' class="form-control" ><br> 
+  <button type='submit'  [disabled]='registerForm.invalid ' class="form-control" class="btn btn-primary" >Submit</button>
+  </div></div>
+</form>
+ 

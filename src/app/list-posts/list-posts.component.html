@@ -1,0 +1,51 @@
+<h2>
+  Posts
+</h2>
+<ul class="list-group">
+
+<li class="list-group-item list-group-item-success" *ngFor='let post of posts '>
+Post Title: {{post.postTitle}}<br/>
+Posted By: {{post.author}}<br/>
+Post Description: {{post.postDescription}}<br/>
+
+<em>{{post.likes}}</em>
+<button class="btn btn-info btn" (click)='Likes(post._id)' >Like</button>
+<button class="btn btn-info btn" (click)='Comment(post._id)' >Comments</button>
+
+    <button type="button" class="btn btn-info btn" data-toggle="modal" (click)='view(post._id)' data-target="#myModal">View</button>
+
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="myModal" role="dialog" *ngFor='let x of y'>
+        
+            <!-- Modal -->
+
+                    <div class="modal-dialog"  >
+      
+        <!-- Modal content--> 
+        <div class="modal-content" >
+          <div class="modal-header">  
+            
+            <button type="button" class="close" (click)='close()' data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">{{x.postTitle}}</h4>
+          </div>
+          <div class="modal-body">
+            <p>{{x.postDescription}}</p>
+            <h6> By {{x.author}}</h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" (click)='close()' data-dismiss="modal">OK</button>
+          </div>
+        </div>
+        
+      </div></div>
+ <div *ngIf='post.sh'>
+<div class="form-group">
+<p class="bg-warning">
+     {{comments}}</p>    
+  <form (ngSubmit)='postComment(postForm.value,post._id)' #postForm='ngForm' novalidate>
+  <textarea  class="form-control" name='txt' id='txt' ngModel></textarea><br/>
+  <button class='btn btn-default'>Post Comment</button>
+</form>
+</div>  </div>
+</li>
+
+</ul>

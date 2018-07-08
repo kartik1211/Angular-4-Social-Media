@@ -1,0 +1,20 @@
+<!-- <p *ngIf = '!loggedIn'> register and sign bar</p>
+<p *ngIf = 'loggedIn'> User signed in</p> -->
+
+
+ <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header"> 
+     
+<a class="navbar-brand" routerLink='homepage' *ngIf='this.myCookie'  >Homepage</a>
+<a class="navbar-brand" routerLink='Createpost' *ngIf='this.myCookie' >Create Post</a>
+<a class="navbar-brand" routerLink='listposts' *ngIf='this.myCookie'  >List Post</a>
+<a class="navbar-brand" routerLink='login' *ngIf='this.myCookie' (click)='logOut()'>LogOut</a>
+
+<a class="navbar-brand" routerLink='login' *ngIf='show && !loggedIn '  (click)='toggleIt()'>Login</a>
+<a class="navbar-brand" routerLink='register' *ngIf='!show && !loggedIn && !myCookie' (click)='toggleIt()'>Register</a>
+
+
+</div>
+</div>
+</nav>

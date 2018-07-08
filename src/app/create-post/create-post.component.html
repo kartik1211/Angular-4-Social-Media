@@ -1,0 +1,9 @@
+<h2>Create Post</h2>
+<form class="form-horizontal" (ngSubmit)='submitPost(createForm.value)' #createForm='ngForm' novalidate>
+        <!-- <div class="form-group"> -->
+Post Title:<input class="form-control" type='text' name='postTitle' ngModel required/><br>
+Post Description<textarea class="form-control" type='textarea' name='postDescription' ngModel required></textarea><br>
+
+<input type='submit' class="btn btn-default" value='Submit Post' [disabled]='createForm.invalid'/>
+</form>
+
